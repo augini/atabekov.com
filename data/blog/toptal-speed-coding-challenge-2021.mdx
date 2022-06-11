@@ -1,0 +1,88 @@
+---
+title: 'Toptal Speed Coding Challenge 2021'
+publishedAt: '2022-06-06'
+summary: 'How a coding challenge got me into Toptal, one of the top freelancing networks'
+image: '/static/images/toptal-speed-coding-challenge/coding-challenge.jpeg'
+---
+
+### Introduction
+
+In this post, I want to write about one of the coding challenges that I enjoyed most participating in and also elaborate on the advantages of frequent participation in competitive challenges. I was of the opinion that the coding challenges focus on problems which can only be solved using specific algorithms and data structures that would otherwise be time or resource inefficient. However, this coding challenge took a significantly different approach and gave developers more freedom on their creativity rather than their algorithmic knowledge. This is not to say algorithmic knowledge is not important, obviously they are but every so often challenges that take a different perspective brings more fun to the table.
+
+<Image
+  alt={`Farrukh Atabekov's journey`}
+  src={`/static/images/toptal-speed-coding-challenge/coding-challenge.jpeg`}
+  width={1200}
+  height={850}
+  priority
+/>
+
+### What is this Speed Coding Challenge ?
+
+Organized by [Toptal](https://www.toptal.com/) to test the developer's efficiency to submit solutions in the fastest time possible, it consisted of a few beginner level coding challenges on the first day, one more problem added every day increasing in difficulty. The challenge started on September 27 and finished on October 10 and there were participants from 151 countries, constituting a total of over 200K solution attempts.
+
+### Format
+
+The problems ranged from easy level such as finding the cube of a given number to more difficult ones as stimulating a tic tac toe game. A total of 3 minutes was given for all problems with a certain point in the range of 10 ~ 500 based on difficulty for each problem solved and additional 10 points for each second remaining if the developer completed all problems within 3 minutes. The developers needed to wait 5 (or so) minutes before starting another run on the problems. This was done to avoid server overload in case developers end up automating problem submission with bots.
+
+The new added problem each day would give any developer, who joined the competition after it started, a chance to catch up with the rest of competitors. Therefore, even if you joined on the last day, you would still be able to win the competition.
+
+Problems together with the editor and timer was displayed on the website and developers could use any creative means to submit the problems. This could include methods as automating the browser with tools such as [Selenium](https://www.selenium.dev/) or [Chromium](https://www.chromium.org/Home/), creating bots or any other techniques in accordance with Toptal’s [T&C’s](https://speedcoding.toptal.com/dyn/terms_and_conditions_a3_ch24.html).
+
+### My approach
+
+Initially, I concentrated on solving the problems first and getting solutions. As I did this, I could already see the major gap between my score and top scores in the leaderboard.
+
+After all the problems are solved, it was time to start automating the submission. First approach I took was a script to submit the solutions in the browser.
+
+```jsx
+const solutions = {
+  double: 'return x*2',
+  numberToString: '...',
+  square: '...',
+  floatToInt: '...',
+  isEven: '...'
+};
+
+const get_submit_button = () =>
+  document.querySelector('.task-buttons > .col > .btn');
+
+const solve = () => {
+  const ace_editor = ace.edit(document.querySelector('.ace_editor'));
+  const submission = ace_editor.getValue();
+  for (const key in solutions) {
+    if (submission.includes('box.' + key + ' ')) {
+      ace_editor.insert(solutions[key]);
+      get_submit_button().click();
+      setTimeout(() => {
+        get_submit_button().click();
+        setTimeout(() => {
+          solve();
+        }, 400);
+      }, 900);
+      return;
+    }
+  }
+};
+solve();
+```
+
+It was fast than submitting solutions manually but even faster approach was the use of the API to totally eliminate the browser thus saving more time.
+
+I reverse engineered the submission procedure and developed a script to automatically submit the solutions using the API and deployed the bot to [Heroku](https://www.heroku.com/) to constantly keep submitting the solutions on time intervals. The reason behind this was based on the response time of Toptal’s server, it was obvious that sometimes it was overloaded and response time was longer than other times. So it was not all about the technical capabilities of the developer but also whether they hit the server when it is less overloaded and has a faster response time. Overall, the third approach ended up being the most efficient and I tested the same bot on different servers on AWS EC2, GCP with different locations for the aim of sending requests from a location closer to Toptal servers. However, Heroku had the fastest response time from Toptal servers for its optimization of some sort even if it is built on top of AWS.
+
+### My Result
+
+Here is the [leaderboard](https://speedcoding.toptal.com/leaderboard?ch=toptal-js-2021&country=all) of the competition and the good result was I was [ranked first](https://speedcoding.toptal.com/leaderboard?ch=toptal-js-2021&country=UZ) among Uzbek developers. Later, Toptal reached out to me for a job offer to join their platform because of this result. I enjoyed the competition itself and Toptal’s offer was a cherry on the cake. You can read here more on how I joined Toptal platform.
+
+### Conclusion about competitive programming
+
+Here are a few advantages:
+
+- A chance to get recognized by top companies in the field. Google frequently organizes competitions as [hash code](https://codingcompetitions.withgoogle.com/), [code jam](https://codingcompetitions.withgoogle.com/) and [kick start](https://codingcompetitions.withgoogle.com/).
+- Revision of algorithmic or other programming techniques and tools.
+- An ability to network with other skilled developers.
+
+In conclusion, I think competitive programming is a great opportunity for developers to show their development capacity and skills.
+
+Thanks for your time !

@@ -1,0 +1,12 @@
+*.log
+.DS_Store
+.next
+node_modules
+.env.local
+public/sitemap.xml
+public/feed.xml
+.vercel
+
+personal-portfolio-320610-42d3f53717a2.json
+
+.vscode
