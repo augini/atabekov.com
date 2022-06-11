@@ -68,21 +68,9 @@ export default function MobileMenu({
           )}
         >
           <MobileNavItem
-            href="/guestbook"
-            title="Comments"
+            href="/home"
+            title="Home"
             transitionDelay={'175ms'}
-            text={text}
-          />
-          <MobileNavItem
-            href="/dashboard"
-            title="Dashboard"
-            transitionDelay={'200ms'}
-            text={text}
-          />
-          <MobileNavItem
-            href="/blog"
-            title="Blog"
-            transitionDelay={'250ms'}
             text={text}
           />
           <MobileNavItem
@@ -92,14 +80,33 @@ export default function MobileMenu({
             text={text}
           />
           <MobileNavItem
-            href="/newsletter"
-            title="Newsletter"
+            href="/signbook"
+            title="Signbook"
+            transitionDelay={'175ms'}
+            text={text}
+          />
+          <MobileNavItem
+            href="/blog"
+            title="Blog"
+            transitionDelay={'250ms'}
+            text={text}
+          />
+          <MobileNavItem
+            href="/dashboard"
+            title="Dashboard"
+            transitionDelay={'200ms'}
+            text={text}
+          />
+
+          <MobileNavItem
+            href="https://www.telegram.me/atabekovfarrukh"
+            title="Telegram"
             transitionDelay={'300ms'}
             text={text}
           />
           <MobileNavItem
-            href="/resume"
-            title="Resume"
+            href="/cv"
+            title="Résumé"
             transitionDelay={'300ms'}
             text={text}
           />
