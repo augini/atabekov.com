@@ -2,7 +2,7 @@
 
 # atabekov.com
 
-I remember creating my personal website with pure HTML, CSS and JavaScript when I first started looking for a job as a developer. Even it was a quite simple static site, it has given a number of benefits. Therefore I have decided to create it with new tools to give it a more dynamic style.
+I remember creating [my very first personal site](https://augini.github.io/portfolio-website/) with pure HTML, CSS and JavaScript when I first started looking for a job as a developer. Even it was a quite simple static site, it has given a number of benefits. Therefore I have decided to create it with new tools to give it a more dynamic style.
 
 In my opinion, having a personal site has a lot of advantags:
 
