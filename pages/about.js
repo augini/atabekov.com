@@ -33,40 +33,38 @@ export default function About() {
           <p>
             I spend most of my time writing code and I enjoy doing so. I
             regularly solve programming challenges and try to participate on
-            Hackathons. You can read about one of those challenges here. I also
-            spend my time doing open source contributions whenever I can.
+            Hackathons. You can read more about{' '}
+            <Link href="https://www.atabekov.com/blog/toptal-speed-coding-challenge-2021">
+              <a style={{ textDecoration: 'none' }}> one of those challenges</a>
+            </Link>
+            . I also spend my time doing open source contributions whenever I
+            can.
           </p>
 
           <p>
-            The entire point of development is build to be able to create and
-            build stuff that others can use and benefit from. I have been among
-            teams and built some applications as a startup, nowadays focused on
-            creating applications for Central Asian market. In the fast paced
-            tech world, I believe it is important to focus on the growth and
+            I grew up in a small-town called Hazarasp in Khorezm province, came
+            to South Korea in 2015 on a full-scholarship for a 4-year university
+            and graduated with CS and BA Bachelor&apos;s degrees in 2020. Even
+            though I went to school, I relied highly on MOOCs and I still extend
+            my knowledge of computer science by taking courses on platforms such
+            as Coursera, MIT Open Courseware, Udemy, Educative. Read more about
+            <Link href="https://www.atabekov.com/blog/toptal-speed-coding-challenge-2021">
+              <a style={{ textDecoration: 'none' }}>
+                {' '}
+                my story of becoming a software engineer
+              </a>
+            </Link>
+            .
+          </p>
+
+          <p>
+            The entire point of development is to be able to create and build
+            stuff that others can use and benefit from. I have been among teams
+            and built some applications as a startup. In the fast paced tech
+            world, I believe it is important to focus on the growth and
             usability of the application and to be constantly on the look for
             features that serve to make it a breeze for its existing and new
             users.
-          </p>
-
-          <p>
-            Early on my career as a developer, I have subscribed to the opinion
-            that project management is as important as programming and writing
-            code, if not more important to provide the flow and successful
-            delivery of the product.
-          </p>
-
-          <p>
-            Litle bit about where I came from and you can read more about my
-            story of becoming a software engineer in here. I grew up in a
-            small-town called Hazarasp in Khorezm province, came to South Korea
-            in 2015 on a full-scholarship for a{' '}
-            <Link href="http://www.sejong.ac.kr/">
-              <a style={{ textDecoration: 'none' }}> 4-year university</a>
-            </Link>{' '}
-            and graduated with CS and BA Bachelor&apos;s degrees in 2020. Even
-            though I went to school, I relied highly on MOOCs and I still do try
-            to extend my knowledge of computer science by taking courses on
-            platforms such as Coursera, MIT Open Courseware, Udemy, Educative.
           </p>
 
           <p>
@@ -74,7 +72,7 @@ export default function About() {
             where I put everything from my personal side projects, programming
             challenges and more. You can leave a comment{' '}
             <Link href={'/signbook'}>
-              <a style={{ textDecoration: 'none' }}>here</a>
+              <a style={{ textDecoration: 'none' }}>on my signbook</a>
             </Link>{' '}
             to share your thoughts about this site.
           </p>
