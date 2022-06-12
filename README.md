@@ -8,7 +8,7 @@ Visit the new version of [atabekov.com](https://atabekov.com) 🚀.
 
 In my opinion, having a personal site has a lot of advantags:
 
-- There are people who can benefit from your experience and content. I read a lot developer blogs and even if it is difficult to find good ones, mostly they are quite insightful.
+- There are people who can benefit from your experience and content. I read a lot of developer blogs and even if it is difficult to find good ones, mostly they are quite insightful.
 - You create online presence. During one of my technical interviews, I asked the interviewer why he picked my portfolio and he simply said that he liked my personal website and many developers do not have online presence where they showcase their work.
 - Last but not least, having my site gives me a chance to play around with new tools and frameworks. You get to integrate a new tool to an existing website rather than just creating a pet project with it.
 
