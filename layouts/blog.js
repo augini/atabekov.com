@@ -6,7 +6,7 @@ import Subscribe from '@/components/Subscribe';
 import ViewCounter from '@/components/ViewCounter';
 
 const editUrl = (slug) =>
-  `https://github.com/augini/atabekov.com/edit/main/data/blog/${slug}.mdx`;
+  `https://github.com/augini/atabekov.com/edit/master/data/blog/${slug}.mdx`;
 
 export default function BlogLayout({ children, frontMatter }) {
   return (
