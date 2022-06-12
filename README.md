@@ -4,6 +4,8 @@
 
 I remember creating [my very first personal site](https://augini.github.io/portfolio-website/) with pure HTML, CSS and JavaScript when I first started looking for a job as a developer. Even it was a quite simple static site, it has given a number of benefits. Therefore I have decided to create it with new tools to give it a more dynamic style.
 
+Visit the new version of [atabekov.com](https://atabekov.com)
+
 In my opinion, having a personal site has a lot of advantags:
 
 - There are people who can benefit from your experience and content. I read a lot developer blogs and even if it is difficult to find good ones, mostly they are quite insightful.
