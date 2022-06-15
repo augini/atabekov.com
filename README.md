@@ -12,6 +12,8 @@ Even if it was a static site, it has given a number of benefits such as below:
 
 Therefore I have decided to create it with new tools to make it more dynamic.
 
+And now it looks like this: [atabekov.com](https://atabekov.com) 🚀
+
 ## Overview
 
 - `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/dashboard`](https://atabekov.com/dashboard), telegram subscription, and post views.
@@ -37,7 +39,5 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/augini
 - [PlanetScale](https://planetscale.com/)
 - [MDX](https://github.com/mdx-js/mdx)
 - [Tailwind CSS](https://tailwindcss.com/)
-
-The new version of [atabekov.com](https://atabekov.com) 🚀
 
 Inspired by [leerob.io](https://leerob.io)
