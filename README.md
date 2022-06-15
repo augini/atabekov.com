@@ -4,7 +4,7 @@
 
 I remember creating [my very first personal site](https://augini.github.io/portfolio-website/) with pure HTML, CSS and JavaScript when I first started looking for a job as a developer. 
 
-Even if it was a static site, it has given a number of benefits such as below.
+Even if it was a static site, it has given a number of benefits such as below:
 
 - There are people who can benefit from your experience and content. I read a lot of developer blogs and even if it is difficult to find good ones, mostly they are quite insightful.
 - You create online presence. During one of my technical interviews, I asked the interviewer why he picked my portfolio and he simply said that he liked my personal website and many developers do not have online presence where they showcase their work.
