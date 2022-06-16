@@ -1,5 +1,6 @@
 import db from '@/lib/planetscale';
 import { format } from 'date-fns';
+import requestIp from 'request-ip';
 
 export default async function handler(req, res) {
   const today = format(new Date(), 'dd-MMMM-yyyy');
@@ -15,6 +16,8 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
+      const clientIp = requestIp.getClientIp(req);
+
       const [rows] = await db.query(
         `SELECT * FROM daily_views ORDER BY id DESC LIMIT 1;`
       );
@@ -23,10 +26,9 @@ export default async function handler(req, res) {
         await db.query(
           `
           UPDATE daily_views
-          SET count = count + 1
-          WHERE day = ?;
+          SET count = count + 1, ipv6 = ? WHERE day = ?;
         `,
-          [today]
+          [clientIp, today]
         );
 
         return res.status(200).json({
@@ -35,10 +37,10 @@ export default async function handler(req, res) {
       } else {
         let response = await db.query(
           `
-          INSERT INTO daily_views (day, count)
-          VALUES (?, ?);
+          INSERT INTO daily_views (day, count, ipv6)
+          VALUES (?, ?, ?);
         `,
-          [today, 1]
+          [today, 1, clientIp]
         );
 
         return res.status(200).json({
