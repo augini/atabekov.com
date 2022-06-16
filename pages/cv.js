@@ -69,7 +69,7 @@ export default function About() {
             isTitleLink={true}
             titleLink={'https://www.toptal.com/resume/farrukh-atabekov'}
             title={'Full-Stack Engineer, Toptal'}
-            time={'February, 2020 ~ Present'}
+            time={'February, 2022 ~ Present'}
           />
 
           <hr className="text-gray-800 w-full mt-10" />
