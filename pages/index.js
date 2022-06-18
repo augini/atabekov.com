@@ -69,6 +69,10 @@ const Test = (props) => {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="google-site-verification"
+          content="vRZndguZ34iixn6QzW_nNFBVwPZ0SqPeebiGrFtgEn0"
+        />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
