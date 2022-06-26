@@ -60,15 +60,15 @@ export default function Blog({ posts }) {
             </h3>
 
             <BlogPost
-              title="Toptal Speed Coding Challenge 2021"
-              summary="How a coding challenge got me into Toptal, one of the top freelancing networks"
-              slug="toptal-speed-coding-challenge-2021"
+              title="Toptalga A'zo Bo'lish Haqida"
+              summary="Toptalga ishga kirish suhbati uchun qo’llanma"
+              slug="toptal-interview-process"
             />
 
             <BlogPost
-              title="My Story"
-              summary="How I became a Software Engineer"
-              slug="farrukh-atabekov-software-engineer"
+              title="Toptal Speed Coding Challenge 2021"
+              summary="How a coding challenge got me into Toptal, one of the top freelancing networks"
+              slug="toptal-speed-coding-challenge-2021"
             />
           </>
         )}
