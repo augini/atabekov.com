@@ -1,6 +1,6 @@
 export default async function handler(_, res) {
   const telegramResponse = await fetch(
-    `https://api.telegram.org/bot${process.env.TELEGRAM_API_KEY}/getChatMembersCount?chat_id=@atabekovfarrukh`
+    `https://api.telegram.org/bot${process.env.TELEGRAM_API_KEY}/getChatMembersCount?chat_id=@farrukh_atabekov`
   );
 
   const response = await telegramResponse.json();
