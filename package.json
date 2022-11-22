@@ -13,8 +13,8 @@
         "url": "git+https://github.com/augini/portfolio-2.0.git"
     },
     "scripts": {
-        "build": "next build --legacy-peer-deps",
-        "dev": "NODE_OPTIONS=--openssl-legacy-provider next --legacy-peer-deps",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
+        "dev": "NODE_OPTIONS=--openssl-legacy-provider next",
         "start": "next start --legacy-peer-deps",
         "lint": "next lint"
     },
