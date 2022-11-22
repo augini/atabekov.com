@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
     if (req.method === 'POST') {
       if (rows.length == 0) {
-        let response = await db.query(
+        await db.query(
           `
           INSERT INTO views (slug)
           VALUES (?);
