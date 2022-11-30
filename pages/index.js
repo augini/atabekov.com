@@ -22,7 +22,7 @@ function NavItem({ href, text }) {
   );
 }
 
-const Test = (props) => {
+const Home = (props) => {
   const { ...customMeta } = props;
 
   const [mounted, setMounted] = useState(false);
@@ -138,4 +138,4 @@ const Test = (props) => {
   );
 };
 
-export default Test;
+export default Home;

@@ -68,7 +68,7 @@ export default function MobileMenu({
           )}
         >
           <MobileNavItem
-            href="/home"
+            href="/"
             title="Home"
             transitionDelay={'175ms'}
             text={text}
