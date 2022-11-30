@@ -37,7 +37,7 @@ export default async function handler(req, res) {
             UPDATE daily_views
             SET count = count + 1, ipv6 = ? WHERE day = ?;
           `,
-            [clientIp, JSON.stringify(payload)]
+            [JSON.stringify(payload), today]
           );
 
           return res.status(200).json({
