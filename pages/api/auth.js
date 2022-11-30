@@ -4,7 +4,7 @@ const CLIENT_ID = process.env.OAUTH_CLIENT_KEY;
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
 
 export default async function handler(req, res) {
-  console.log(req.query);
+  // console.log(req.query);
   session(req, res);
 
   const { code } = req?.query;
