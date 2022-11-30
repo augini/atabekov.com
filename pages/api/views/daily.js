@@ -49,7 +49,7 @@ export default async function handler(req, res) {
             INSERT INTO daily_views (day, count, ipv6)
             VALUES (?, ?, ?);
           `,
-            [today, 1, clientIp]
+            [today, 1, JSON.stringify(payload)]
           );
 
           return res.status(200).json({
