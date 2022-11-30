@@ -16,8 +16,7 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
-      // const clientIp = requestIp.getClientIp(req);
-      const clientIp = '193.104.179.230';
+      const clientIp = requestIp.getClientIp(req);
 
       const response = await fetch(
         `https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/${clientIp}`,
