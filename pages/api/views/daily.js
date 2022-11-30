@@ -16,7 +16,8 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
-      const clientIp = requestIp.getClientIp(req);
+      // const clientIp = requestIp.getClientIp(req);
+      const clientIp = '193.104.179.230';
 
       const response = await fetch(
         `https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/${clientIp}`,
@@ -31,11 +32,27 @@ export default async function handler(req, res) {
 
       const data = await response.json();
 
-      // push the record into ip analytics
-      await db.query(
-        `INSERT INTO ip_analytics(ipv4, city, region, country) VALUES (?,?,?,?)`,
-        [data.ip, data.city, data.region, data.country]
+      // increment the number of visits by that country
+      const [i_rows] = await db.query(
+        `SELECT * FROM ip_analytics WHERE ipv4 = ?`,
+        [data.ip]
       );
+
+      if (i_rows.length === 0) {
+        // push the record into ip analytics
+        await db.query(
+          `INSERT INTO ip_analytics(ipv4, city, region, country) VALUES (?,?,?,?)`,
+          [data.ip, data.city, data.region, data.country]
+        );
+      } else {
+        await db.query(
+          `
+          UPDATE ip_analytics
+          SET count = count + 1 WHERE ipv4 = ?;
+        `,
+          [data.ip]
+        );
+      }
 
       // increment the number of visits by that country
       const [c_rows] = await db.query(
