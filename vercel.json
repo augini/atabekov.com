@@ -1,15 +1,25 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "headers": [{
-        "source": "/fonts/martel-sans-v7-latin-regular.woff2",
-        "headers": [{
-            "key": "Cache-Control",
-            "value": "public, max-age=31536000, immutable"
-        }]
-    }],
-    "redirects": [{
-        "source": "/projects",
-        "destination": "/about"
-    }]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/fonts/martel-sans-v7-latin-regular.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/projects",
+      "destination": "/about"
+    },
+    {
+      "source": "/toptal-presentation",
+      "destination": "https://prezi.com/view/JNOSdF7htnuf2Pj03WGz/"
+    }
+  ]
 }
