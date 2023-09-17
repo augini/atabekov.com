@@ -17,21 +17,14 @@ export default async function handler(req, res) {
 
     if (req.method === 'POST') {
       const clientIp = requestIp.getClientIp(req);
-
-      const response = await fetch(
-        `https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/${clientIp}`,
-        {
-          method: 'GET',
-          headers: {
-            'X-RapidAPI-Key': process.env.X_RapidAPI_Key,
-            'X-RapidAPI-Host': 'ip-geolocation-ipwhois-io.p.rapidapi.com'
-          }
-        }
-      );
+      const response = await fetch(`http://ipwho.is/31.148.165.81`, {
+        method: 'GET'
+      });
 
       const data = await response.json();
+      console.log(data);
 
-      // increment the number of visits by that country
+      // store the ip information in ip_analytics
       const [i_rows] = await db.query(
         `SELECT * FROM ip_analytics WHERE ipv4 = ?`,
         [data.ip]
@@ -50,27 +43,6 @@ export default async function handler(req, res) {
           SET count = count + 1 WHERE ipv4 = ?;
         `,
           [data.ip]
-        );
-      }
-
-      // increment the number of visits by that country
-      const [c_rows] = await db.query(
-        `SELECT * FROM visits_by_country WHERE country = ?`,
-        [data.country]
-      );
-
-      if (c_rows.length === 0) {
-        await db.query(
-          `INSERT INTO visits_by_country(count, country) VALUES (1,?)`,
-          [data.country]
-        );
-      } else {
-        await db.query(
-          `
-          UPDATE visits_by_country
-          SET count = count + 1 WHERE country = ?;
-        `,
-          [data.country]
         );
       }
 

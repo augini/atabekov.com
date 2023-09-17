@@ -13,7 +13,7 @@ export default function About() {
         <div className="mb-8 prose dark:prose-dark leading-6 max-w-2xl text-gray-800">
           <p>
             I&apos;m Atabekov Farrukh, software engineer and instructor from
-            Khorezm, Uzbekistan currently living in Seoul, South Korea.
+            Uzbekistan.
           </p>
 
           <p>
