@@ -22,7 +22,6 @@ export default async function handler(req, res) {
       });
 
       const data = await response.json();
-      console.log(data);
 
       // store the ip information in ip_analytics
       const [i_rows] = await db.query(

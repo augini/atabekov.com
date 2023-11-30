@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     if (!login) {
       return res.status(403).send('Unauthorized');
     }
-    console.log(req.body, email);
+
     const body = (req.body.body || '').slice(0, 500);
     const [insert] = await db.query(
       `

@@ -51,7 +51,3 @@ async function getImageSizes(dir) {
     fs.writeFileSync(`${outputDir}/${slug}`, formatted);
   });
 }
-
-getImageSizes('data/blog')
-  .then(() => console.log('Done!'))
-  .catch((e) => console.error(e));

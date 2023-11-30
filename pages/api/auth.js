@@ -4,13 +4,11 @@ const CLIENT_ID = process.env.OAUTH_CLIENT_KEY;
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
 
 export default async function handler(req, res) {
-  // console.log(req.query);
   session(req, res);
 
   const { code } = req?.query;
 
   if (!code) {
-    // console.log('yeap i arrived until here sir');
     return res.redirect(
       `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&allow_signup=false`
     );
