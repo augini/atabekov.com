@@ -51,3 +51,5 @@ async function getImageSizes(dir) {
     fs.writeFileSync(`${outputDir}/${slug}`, formatted);
   });
 }
+
+getImageSizes('data/blog');
