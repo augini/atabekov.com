@@ -7,13 +7,16 @@ export default function About() {
     <Container title="About – Farrukh Atabekov">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-gray-800 dark:text-white">
-          About Me
+          About
         </h1>
 
         <div className="mb-8 prose dark:prose-dark leading-6 max-w-2xl text-gray-800">
           <p>
-            I&apos;m Atabekov Farrukh, software engineer and instructor from
-            Uzbekistan.
+            Hey 👋 there,
+            <br />
+            <br />
+            I&apos;m Atabekov Farrukh, results-driven software engineer with
+            expertise in designing and optimizing software systems.
           </p>
 
           <p>
@@ -24,7 +27,7 @@ export default function About() {
               <a style={{ textDecoration: 'none' }}>my blog</a>
             </Link>{' '}
             and you can checkout those articles on
-            <Link href="https://www.telegram.me/atabekovfarrukh">
+            <Link href="https://www.telegram.me/farrukh_atabekov">
               <a style={{ textDecoration: 'none' }}> my telegram channel</a>
             </Link>{' '}
             as well.
@@ -42,19 +45,22 @@ export default function About() {
           </p>
 
           <p>
-            I grew up in a small-town called Hazarasp in Khorezm province, came
-            to South Korea in 2015 on a full-scholarship for a 4-year university
-            and graduated with CS and BA Bachelor&apos;s degrees in 2020. Even
-            though I went to school, I relied highly on MOOCs and I still extend
-            my knowledge of computer science by taking courses on platforms such
-            as Coursera, MIT Open Courseware, Udemy, Educative. Read more about
-            <Link href="https://www.atabekov.com/blog/toptal-speed-coding-challenge-2021">
-              <a style={{ textDecoration: 'none' }}>
-                {' '}
-                my story of becoming a software engineer
-              </a>
+            The accessibility of information in today&apos;s era continues to
+            astonish me, and I am committed to further expanding my knowledge
+            through continuous learning. You can
+            <Link href="https://www.atabekov.com/blog/farrukh-atabekov-software-engineer">
+              <a style={{ textDecoration: 'none' }}> read more </a>
             </Link>
-            .
+            about my story of becoming a software engineer.
+          </p>
+
+          <p>
+            Currently, I am a member of{' '}
+            <Link href="https://toptal.com/resume/farrukh-atabekov">
+              <a style={{ textDecoration: 'none' }}> Toptal network </a>
+            </Link>{' '}
+            that matches world&apos;s top software engineers with top companies
+            and organizations.
           </p>
 
           <p>
@@ -89,7 +95,7 @@ export default function About() {
         <iframe
           height="280"
           src="https://www.google.com/maps/d/embed?mid=1dCRHbZifcG28yhQmBlLN7U3nH3KJQGYC&hl=en"
-          title="Lee's Travel Map"
+          title="Farrukh's Travel Map"
           width="100%"
         />
       </div>
