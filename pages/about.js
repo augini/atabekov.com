@@ -20,12 +20,14 @@ export default function About() {
             I&apos;ve contributed to open source projects and spoken at meet-ups
             about software engineering, web and mobile development. I write
             about software and personal growth here on{' '}
-            <Link href="/blog">
-              <a style={{ textDecoration: 'none' }}>my blog</a>
+            <Link href="/blog" style={{ textDecoration: 'none' }}>
+              my blog
             </Link>{' '}
             and you can checkout those articles on
-            <Link href="https://www.telegram.me/farrukh_atabekov">
-              <a style={{ textDecoration: 'none' }}> my telegram channel</a>
+            <Link
+              href="https://www.telegram.me/farrukh_atabekov"
+              style={{ textDecoration: 'none' }}>
+               my telegram channel
             </Link>{' '}
             as well.
           </p>
@@ -34,8 +36,10 @@ export default function About() {
             I spend most of my time writing code and I enjoy doing so. I
             regularly solve programming challenges and try to participate on
             Hackathons. You can read more about{' '}
-            <Link href="https://www.atabekov.com/blog/toptal-speed-coding-challenge-2021">
-              <a style={{ textDecoration: 'none' }}> one of those challenges</a>
+            <Link
+              href="https://www.atabekov.com/blog/toptal-speed-coding-challenge-2021"
+              style={{ textDecoration: 'none' }}>
+               one of those challenges
             </Link>
             . I also spend my time doing open source contributions whenever I
             can.
@@ -45,16 +49,20 @@ export default function About() {
             The accessibility of information in today&apos;s era continues to
             astonish me, and I am committed to further expanding my knowledge
             through continuous learning. You can
-            <Link href="https://www.atabekov.com/blog/farrukh-atabekov-software-engineer">
-              <a style={{ textDecoration: 'none' }}> read more </a>
+            <Link
+              href="https://www.atabekov.com/blog/farrukh-atabekov-software-engineer"
+              style={{ textDecoration: 'none' }}>
+               read more 
             </Link>
             about my story of becoming a software engineer.
           </p>
 
           <p>
             Currently, I am a member of{' '}
-            <Link href="https://toptal.com/resume/farrukh-atabekov">
-              <a style={{ textDecoration: 'none' }}> Toptal network </a>
+            <Link
+              href="https://toptal.com/resume/farrukh-atabekov"
+              style={{ textDecoration: 'none' }}>
+               Toptal network 
             </Link>{' '}
             that matches world&apos;s top software engineers with top companies
             and organizations.
@@ -74,8 +82,8 @@ export default function About() {
             <b> Thank you </b>for checking out this tiny piece of the internet
             where I put everything from my personal side projects, programming
             challenges and more. You can leave a comment{' '}
-            <Link href={'/signbook'}>
-              <a style={{ textDecoration: 'none' }}>on my signbook</a>
+            <Link href={'/signbook'} style={{ textDecoration: 'none' }}>
+              on my signbook
             </Link>{' '}
             to share your thoughts about this site.
           </p>

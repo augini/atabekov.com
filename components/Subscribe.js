@@ -12,12 +12,13 @@ export default function Subscribe() {
     <div className="border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-blue-opaque">
       <p className="my-1 text-gray-800 dark:text-gray-200 prose">
         You can also subscribe to{' '}
-        <Link href="https://www.telegram.me/atabekovfarrukh">
-          <a style={{ textDecoration: 'none' }}> my telegram channel</a>
+        <Link
+          href="https://www.telegram.me/atabekovfarrukh"
+          style={{ textDecoration: 'none' }}>
+           my telegram channel
         </Link>{' '}
         where I share new articles, tech-related posts and more.
       </p>
-
       <p className="text-sm text-gray-800 dark:text-gray-200">
         {`${
           subscriberCount > 0 ? subscriberCount.toLocaleString() : '-'

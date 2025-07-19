@@ -10,8 +10,8 @@ function MobileNavItem({ href = '/', title, transitionDelay, text }) {
       style={{ transitionDelay }}
     >
       {title && (
-        <Link href={href}>
-          <a className="flex w-auto pb-4">{title}</a>
+        <Link href={href} className="flex w-auto pb-4">
+          {title}
         </Link>
       )}
     </li>

@@ -112,12 +112,11 @@ export default function Guestbook({ initialEntries }) {
           </form>
         ) : (
           // eslint-disable-next-line @next/next/no-html-link-for-pages
-          <a
+          (<a
             href="/api/auth"
             className="flex items-center justify-center my-4 font-bold h-8 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
-          >
-            Login
-          </a>
+          >Login
+                      </a>)
         )}
         {form.state === 'error' ? (
           <ErrorMessage>{form.message}</ErrorMessage>

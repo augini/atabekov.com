@@ -14,10 +14,12 @@ const DynamicJqueryParticles = dynamic(
 
 function NavItem({ href, text }) {
   return (
-    <NextLink href={href}>
-      <a className="font-medium p-1 text-white sm:p-4 hidden md:inline-block">
-        <span className="capsize">{text}</span>
-      </a>
+    <NextLink
+      href={href}
+      className="font-medium p-1 text-white sm:p-4 hidden md:inline-block">
+
+      <span className="capsize">{text}</span>
+
     </NextLink>
   );
 }
