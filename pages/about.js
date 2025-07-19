@@ -12,9 +12,6 @@ export default function About() {
 
         <div className="mb-8 prose dark:prose-dark leading-6 max-w-2xl text-gray-800">
           <p>
-            Hey 👋 there,
-            <br />
-            <br />
             I&apos;m Atabekov Farrukh, results-driven software engineer with
             expertise in designing and optimizing software systems.
           </p>

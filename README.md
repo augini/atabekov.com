@@ -2,7 +2,7 @@
 
 # atabekov.com
 
-I remember creating [my very first personal site](https://augini.github.io/portfolio-website/) with pure HTML, CSS and JavaScript when I first started looking for a job as a developer. 
+I remember creating [my very first personal site](https://augini.github.io/portfolio-website/) with pure HTML, CSS and JavaScript when I first started looking for a job as a developer.
 
 Even if it was a static site, it has given a number of benefits such as below:
 
@@ -36,7 +36,8 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/augini
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
-- [PlanetScale](https://planetscale.com/)
+  <!-- TODO: replace with Postgres -->
+  <!-- - [PlanetScale](https://planetscale.com/) -->
 - [MDX](https://github.com/mdx-js/mdx)
 - [Tailwind CSS](https://tailwindcss.com/)
 

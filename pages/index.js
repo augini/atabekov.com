@@ -129,7 +129,7 @@ const Home = (props) => {
         <DynamicJqueryParticles />
       </div>
       <p className="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-        &copy; 2022{' '}
+        &copy; 2025{' '}
         <a href="https://atabekov.com" className="text-white">
           atabekov.com
         </a>

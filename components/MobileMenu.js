@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import useDelayedRender from 'use-delayed-render';
 import { useState, useEffect } from 'react';
 import styles from 'styles/mobile-menu.module.css';
 
@@ -24,13 +23,15 @@ export default function MobileMenu({
   text = 'text-gray-900'
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
-    {
-      enterDelay: 20,
-      exitDelay: 300
+  const [isMenuMounted, setIsMenuMounted] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuMounted(true);
+    } else {
+      setTimeout(() => setIsMenuMounted(false), 300); // Match exit delay
     }
-  );
+  }, [isMenuOpen]);
 
   function toggleMenu() {
     if (isMenuOpen) {
@@ -43,7 +44,7 @@ export default function MobileMenu({
   }
 
   useEffect(() => {
-    return function cleanup() {
+    return () => {
       document.body.style.overflow = '';
     };
   }, []);
@@ -64,7 +65,7 @@ export default function MobileMenu({
           className={cn(
             styles.menu,
             `flex flex-col absolute ${bg} dark:bg-black pl-4 pr-8`,
-            isMenuRendered && styles.menuRendered
+            isMenuOpen && styles.menuRendered
           )}
         >
           <MobileNavItem
@@ -97,7 +98,6 @@ export default function MobileMenu({
             transitionDelay={'200ms'}
             text={text}
           />
-
           <MobileNavItem
             href="https://www.telegram.me/atabekovfarrukh"
             title="Telegram"
